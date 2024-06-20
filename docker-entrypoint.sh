@@ -15,5 +15,5 @@ if [ -z "$RESULT" ]; then
   exit 1
 fi
 
-wget -O - -q "$REEVE_API/api/v1/var/set?key=${RESULT_VAR:-PACKAGE_VERSION}&value=$RESULT" >/dev/null
+wget -O - -q "$REEVE_API/api/v1/var?key=${RESULT_VAR:-PACKAGE_VERSION}&value=$RESULT" >/dev/null
 echo Set ${RESULT_VAR:-PACKAGE_VERSION}=$RESULT
